@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		class Animal{
+			 Food;
+			 Locaton;
+			 constructor(Food, Locaton){
+			 	this.Food =  Food;
+			 	this.Locaton = Locaton;
+			 }
+			 makeNoise(){
+			 	document.write(' make ');
+			 }
+			 eat(){
+			 	document.write(' eat ');
+			 }
+			 sleep(){
+			 	document.write(' sleep ');
+			 }
+		}
+		class Cat extends Animal{
+		
+			makeNoise(){
+				document.write('cat');
+					super.makeNoise();
+					document.write('meow');
+
+			}
+			eat(){
+				document.write('cat');
+				super.eat();
+				document.write('cat food');
+			 }
+			 sleep(){
+			 	document.write('Cat');
+			 super.sleep();
+			 	document.write('curled up');
+			 }
+		}
+		class Dog extends Animal{
+		
+				makeNoise(){
+				document.write('dog');
+				super.makeNoise();
+				document.write('woof');
+
+			}
+			eat(){
+				document.write('dog');
+				super.eat();
+				document.write('meet');
+			 }
+			 sleep(){
+			 	document.write('Dog');
+			 	super.sleep();
+			 	document.write('lying down');
+			 }
+		}
+		class Horse{
+		
+			makeNoise(){
+				document.write('horse');
+					super.makeNoise();
+					document.write('standing');
+
+			}
+			eat(){
+				document.write('horse');
+				super.eat();
+				document.write('Oats and millet');
+			 }
+			 sleep(){
+			 	document.write('horse');
+			 	super.sleep();
+			 	document.write('standing');
+			 } 
+		}
+		class Veterenar{
+			treatAnimal(){
+
+			}
+		}
+		let c = new Cat("Cat food","Home");
+		let d = new Dog("Meet", "Outdoor");
+		let h = new Horse("Oats and millet","field");
+		console.log(c.eat());
+	</script>
+
+</body>
+</html>

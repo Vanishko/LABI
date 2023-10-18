@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>laba4</title>
+</head>
+<body>
+<script type="text/javascript">
+	class Math{
+		constructor(Pervoe,Vtoroe){
+			this.Pervoe = Pervoe;
+			this.Vtoroe = Vtoroe;
+			}
+		print(){
+					return (`Pervoe:${this.Pervoe} Vtoroe:${this.Vtoroe}`);
+		}
+		sum(){
+				return this.Pervoe+this.Vtoroe
+		}
+		minus(){
+			return this.Pervoe-this.Vtoroe
+		}
+		substract(){
+			return this.Pervoe/this.Vtoroe
+		}
+		um(){
+			return this.Pervoe*this.Vtoroe
+		}
+		}
+
+		let a = new Math( Number(prompt('введите первое число первого объекта')), Number(prompt('введите второе число первого объекта')));
+		let b = new  Math(Number(prompt('введите первое число второго объекта')), Number(prompt('введите второе число второе объекта')));
+		let c = new Math(Number(prompt('введите первое число третьего объекта')), Number(prompt('введите второе число третьего объекта')));
+		let arr = [a, b ,c];
+		for(let al in arr){
+
+		document.write(`${arr[al].print()} sum = ${arr[al].sum()} minus = ${arr[al].minus()} substract = ${arr[al].substract()} 
+			um = ${arr[al].um()}` + '<br>');
+			}
+	
+</script>
+
+</body>
+</html>

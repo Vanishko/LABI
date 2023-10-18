@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		function po(){
+			var n = prompt("Введите отрейательные и положительные числа");
+			var arr = n.split(" ");
+			var  sun1 = 0;
+			var  sun2 = 0;
+			var sis = 0; 
+			for(let al of arr){
+				if(al <= 0){
+					sun1 = al;
+
+				}else{
+					sun2 = al;
+				}
+			}
+			
+			sis = sun1;
+			sun1 = sun2;
+			sun2 = sun1;
+
+
+			
+			console.log(sun1);
+			console.log(sis);
+				
+		}
+		function lika(){
+
+ 				}
+
+	</script>
+</head>
+<body>
+	<form id="lola">
+		<h3>Введите кол-во чисел в массиве</h3>
+
+		<input type="button" value="ввести" onclick="po()">
+		
+		
+	</form>
+
+</body>
+</html>
