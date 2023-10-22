@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function persone(Name, SureName, data) {
+		this.Name = Name;
+		this.SureName=  SureName;
+		this. data = data;
+		this.print = function(){
+			document.write(this.SureName +" "+ this.Name +" "+ this.data+ "<br>");
+		}
+	
+	}
+	function car(Marka, dataC, v) {
+		this.Marka = Marka;
+		this.dataC = dataC;
+		this.v = v;
+		this.print = function(){
+		 document.write(this.Marka +" "+this.dataC+" "+this.v+ "<br>");
+	}
+	}
+	function book(bName, Avtor,Bdata) {
+		this.bName = bName;
+		this.Avtor = Avtor ;
+		this.Bdata = Bdata;
+		this.print  = function(){
+		document.write(this.bName+" "+this.Avtor+" "+this.Bdata + "<br>");
+		this.show= function(c,a){
+			document.write(a.Name+ " читает книгу "+ this.bName+" про машину "+c.Marka);
+
+		}
+}		}
+		var a = new persone("Ибрагим", "Абдулаев", "02.04.2004");
+		var c = new car("Reno", "logan"," 3.5");
+		var b = new book("  Топ гир", "logan", "2023");
+		a.print();
+		c.print();
+		b.print();
+		b.show(c,a);
+
+
+</script>
+</body>
+</html>
