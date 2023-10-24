@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function factory(firstKey, entityName, secondKey, entityProperty){
+return {
+[firstKey]: entityName,
+[secondKey]: entityProperty
+}}
+
+
+let people = [];
+let car = [];
+let book = [];
+
+people.push(factory('имя', 'Алексей', 'Возраст', 18));
+people.push(factory('имя', 'Саша', 'Возраст',49));
+people.push(factory('имя', 'Сергей', 'Возраст', 25));
+
+car.push(factory('марка', 'Nissan', 'Год выпуска', 2000));
+car.push(factory('марка', 'Mercedes', 'Год выпуска', 2018));
+car.push(factory('марка', 'Toyota', 'Год выпуска', 2011));
+
+book.push(factory('Название', 'Lovely bones', 'Год выпуска', 2002));
+book.push(factory('Название', 'Flowers for Algernon', 'Год выпуска', 1959));
+book.push(factory('Название', 'Метро 2033', 2005));
+
+for (let key in people){
+document.write(Object.entries(people[key]) + '<br>');
+}
+for (let key in car){
+document.write(Object.entries(car[key])+ '<br>');
+}
+for (let key in book){
+document.write(Object.entries(book[key]) + '<br>');
+}
+
+</script>
+</body>
+</html>
