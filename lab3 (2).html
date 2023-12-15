@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>laba3</title>
+</head>
+<body>
+<input type="text" id="val">
+<input type="button" value="Проверить ip" onclick="check()">
+<p style="font-size: 30px;"></p>
+<script>
+function check(){
+let val = document.getElementById('val').value;
+let ipv4 = /^(\s*|.*\s+)(25[0-5]\.|2[0-4]\d\.|1\d\d\.|[1-9]\d\.|\d\.){3}(25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(\s*|\s+.*)$/;
+let ipv6 = /^(\s*|.*\s+)([0-9a-f]{4}:){7}[0-9a-f]{4}(\s*|\s+.*)$/i;
+let paragr = document.getElementsByTagName('p')[0];
+
+if (ipv4.test(val)){
+
+paragr.innerText = 'Корректный IPv4';
+}
+else if (ipv6.test(val)){
+
+paragr.innerText = 'Корректный IPv6';
+}
+else{
+
+paragr.innerText = 'Некорректный IP!';
+}
+}
+</script>
+</body>
+</html>

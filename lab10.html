@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>Lab10</title>
+<style>
+body {display: flex; 
+justify-content: center;}
+
+section {width: 600px;}
+
+header {padding: 5px; 
+border: 2px solid black;
+margin-bottom: 10px;
+display: flex;
+justify-content: space-around;}
+
+article {padding: 20px; 
+display: flex;
+justify-content: space-between;
+border: 2px solid black;}
+
+img {border: 1px solid gray;}
+
+article > div:first-child {width: 55%;}
+article > div:last-child {width: 40%;}
+
+p, a {text-align: justify; 
+font-size: 18px;}
+</style>
+</head>
+<body>
+	<section>
+		<header>
+			<div>
+				<input type="button" value="Ч/Б" onclick="colorchange('black', 'white')">
+				<input type="button" value="Б/Ч" onclick="colorchange('white', 'black')">
+				<input type="button" value="Г/Ч" onclick="colorchange('blue', 'black')">
+			</div>
+			<div>
+				<input type="button" value="Вкл/выкл рисунки" onclick="turnPictures()">
+			</div>
+			<div>
+				<input type="button" value="18px" onclick="fontSize('18px')">
+				<input type="button" value="20px" onclick="fontSize('20px')">
+				<input type="button" value="24px" onclick="fontSize('24px')">
+			</div>
+		</header>
+		<article>
+			<div>
+				<h2>Море</h2>
+				<p>Мо́ре — часть Мирового океана, обособленная сушей или возвышениями подводного рельефа. </p>
+				<img src="https://vseoplanete.ru/wp-content/uploads/2022/12/hjhgjhgjgjcghdghf.jpg" width="308">
+				<p>Отличается от Мирового океана также гидрологическим, метеорологическим и климатическим режимами, что связано с их окраинным положением относительно океанов и замедлением водообмена из-за ограниченности связи с открытой частью </p>
+				<h2>Законы</h2>
+				<p>Менее законно придаётся оно солёным или пресным озёрам (например, Каспий, Арал, Мёртвое море, Байкал — «Славное море — священный Байкал»). Кроме того, морем обозначают бездну или пропасть, необъятность</p>
+			</div>
+			<div>
+			<p>У различных авторов, в частности, в Библии, морями может называться любое большое водное пространство (реки, озёра, заливы); например, Египетское море (Ис. 11:15) в Библии по разным предположениям обозначает или реку Нил, или часть Чермного моря; кроме того, там называется морем река Евфрат</p>
+			<p>В толковом словаре Даля море определяется как скопление горько-солёных вод в обширных впадинах или разломах земной поверхности. Таким образом, морем называют все эти произвольно разграниченные воды в противоположность земле (суше, материку). Обычно моря сообщаются с мировым океаном посредством проливов (например, Средиземное, Чёрное и другие) и носят это название правильно. </p>
+			<img src="https://wallbox.ru/wallpapers/main2/201714/149143289358e575bd342e67.22240095.jpg" width="224">
+		
+			</div>
+		</article>
+		</section>
+<script>
+function colorchange(font, bg){
+let text = document.querySelectorAll('p,a,h2');
+let background = document.getElementsByTagName('article')[0];
+for (let elem of text)
+elem.style.color = font;
+background.style.backgroundColor = bg;
+}
+
+function turnPictures(){
+let pics = document.images;
+if (!pics[0].getAttribute('hidden')){
+for (let elem of pics)
+elem.setAttribute('hidden', 'true');
+}
+else{
+for (let elem of pics)
+elem.removeAttribute('hidden');
+}}
+
+function fontSize(size){
+let text = document.querySelectorAll('p');
+for (let elem of text)
+elem.style.fontSize = size;
+}
+</script>
+</body>
+</html>
